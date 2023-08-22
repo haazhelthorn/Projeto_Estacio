@@ -1,0 +1,31 @@
+{% extends "layouts.html" %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      {% include "_messages.html" %}
+      {% if workers %}
+      <h2 class="text-center mt-5"> Cadastrar profissionais</h2>
+      <form action="" method="POST">
+        <input type="text" name="worker" class="form-control">
+        <input type="submit" value="Cadastrar profissional" class="btn btn-success mt-2">
+
+      </form>
+      {% else %}
+      <h2 class="text-center mt-5"> Cadastrar categoria</h2>
+      <form action="" method="POST">
+        <input type="text" name="categoria" class="form-control">
+        <input type="submit" value="Cadastrar categoria" class="btn btn-success mt-2">
+
+      </form>
+      {% endif %}
+    </div>
+    <div class="col-md-3"></div>
+
+  </div>
+</div>
+
+{% endblock content %}
